@@ -1,0 +1,77 @@
+- type: entity
+  parent: ClothingBeltSecurity
+  id: KsClothingBeltSecurity
+  name: security belt
+  description: Can hold security gear like handcuffs and flashes, now with an included holster.
+  components:
+  - type: Storage #17 total slots
+    grid:
+    - 0,0,6,1
+    - 8,0,9,0
+    - 8,1,8,1
+    whitelist:
+      tags:
+      - CigPack
+      - Taser
+      - SecBeltEquip
+      - Radio
+      - Sidearm
+      - MagazinePistol
+      - MagazineMagnum
+      - CombatKnife
+      - Truncheon
+      - HandGrenade
+      components:
+      - Stunbaton
+      - FlashOnTrigger
+      - SmokeOnTrigger
+      - Flash
+      - Handcuff
+      - BallisticAmmoProvider
+      - CartridgeAmmo
+      - DoorRemote
+      - Whistle
+      - BalloonPopper
+
+- type: entity
+  parent: KsClothingBeltSecurity
+  id: KsClothingBeltSecurityWebbing
+  name: security carrier
+  description: Unique and versatile chest rig, can hold more security gear than a belt at the cost of mobility.
+  components:
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: Sprite
+    sprite: Clothing/Belt/securitywebbing.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/securitywebbing.rsi
+  - type: Storage #24 total slots
+    grid:
+    - 0,0,2,1
+    - 4,0,6,1
+    - 4,3,6,4
+    - 0,3,2,4
+    whitelist:
+      tags:
+      - CigPack
+      - Taser
+      - SecBeltEquip
+      - Radio
+      - Sidearm
+      - MagazinePistol
+      - MagazineMagnum
+      - CombatKnife
+      - Truncheon
+      - HandGrenade
+      components:
+      - Stunbaton
+      - FlashOnTrigger
+      - SmokeOnTrigger
+      - Flash
+      - Handcuff
+      - BallisticAmmoProvider
+      - CartridgeAmmo
+      - DoorRemote
+      - Whistle
+      - BalloonPopper

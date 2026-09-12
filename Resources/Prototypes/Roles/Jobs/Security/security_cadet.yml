@@ -30,13 +30,13 @@
     outerClothing: ClothingOuterArmorBasic
     id: SecurityCadetPDA
     ears: ClothingHeadsetSecurity
-    belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58
+    belt: KsClothingBeltSecurityFilled #KS14
+    #pocket1: WeaponPistolMk58 #KS14: added to the belt
     pocket2: BookSecurity
   storage:
     back:
     - Flash
-    - MagazinePistol
+    #- MagazinePistol #KS14: added to the belt
 
 - type: chameleonOutfit
   id: SecurityCadetChameleonOutfit
@@ -47,5 +47,5 @@
     eyes: ClothingEyesHudSecurity
     mask: ClothingMaskGasSecurity
     neck: ClothingNeckScarfStripedRed
-    belt: ClothingBeltSecurity
+    belt: KsClothingBeltSecurity #KS14
     gloves: ClothingHandsGlovesColorBlack

@@ -326,7 +326,7 @@
     - id: BoxEncryptionKeySecurity
     - id: CigarGoldCase
       prob: 0.50
-    - id: ClothingBeltSecurityFilled
+    - id: KsClothingBeltSecurityFilled #KS14
     - id: ClothingEyesGlassesSecurity
     - id: ClothingHeadsetAltSecurity
     - id: ClothingOuterCoatHoSTrench

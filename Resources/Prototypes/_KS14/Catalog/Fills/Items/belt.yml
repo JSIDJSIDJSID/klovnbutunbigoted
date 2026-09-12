@@ -1,0 +1,32 @@
+- type: entityTable
+  id: KsBeltSecurityEntityTable
+  table: !type:AllSelector
+    children:
+    - id: PolymerBaton
+    - id: MagazinePistol
+    - id: Handcuffs
+      amount: 2
+    - id: HoloprojectorSecurity
+    - id: RadioHandheldSecurity
+    - id: WeaponPistolMk58
+    - id: SecurityWhistle
+
+- type: entity
+  id: KsClothingBeltSecurityFilled
+  parent: KsClothingBeltSecurity
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: KsBeltSecurityEntityTable
+
+- type: entity
+  id: KsClothingBeltSecurityWebbingFilled
+  parent: KsClothingBeltSecurityWebbing
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: KsBeltSecurityEntityTable

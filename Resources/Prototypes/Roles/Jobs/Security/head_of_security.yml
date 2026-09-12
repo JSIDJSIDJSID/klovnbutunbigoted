@@ -46,11 +46,11 @@
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
-    pocket1: WeaponPistolMk58
+    #pocket1: WeaponPistolMk58 #KS14: added to the belt
   storage:
     back:
     - Flash
-    - MagazinePistol
+    #- MagazinePistol #KS14: added to the belt
 
 - type: chameleonOutfit
   id: HeadOfSecurityChameleonOutfit

@@ -80,7 +80,7 @@
     bundle:
     - ClothingHeadHelmetBasic
     - ClothingOuterArmorBasic
-    - ClothingBeltSecurityFilled
+    - KsClothingBeltSecurityFilled #KS14
     - WeaponDisabler
 
 - type: entity

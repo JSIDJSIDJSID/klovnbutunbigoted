@@ -1,0 +1,37 @@
+- type: entity
+  parent: [BaseItem, BaseSecurityContraband]
+  id: PolymerBaton
+  name: polymer baton
+  description: A lightweight, durable baton made from advanced polymers.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/polybaton.rsi
+    state: icon
+    scale: 0.9, 0.9
+  - type: Clothing
+    sprite: _Goobstation/Objects/Weapons/Melee/polybaton.rsi
+    quickEquip: false
+    slots:
+      - belt
+  - type: MeleeWeapon
+    animationRotation: -180
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 4
+    soundHit:
+      path: /Audio/_Goobstation/Weapons/Baton/woodhit.ogg
+  - type: StaminaDamageOnHit
+    damage: 20
+  - type: Item
+    size: Normal
+    storedRotation: 45
+    shape:
+    - 0,0,2,0
+  - type: Tag
+    tags:
+    - SecBeltEquip
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 40
+      Plastic: 160

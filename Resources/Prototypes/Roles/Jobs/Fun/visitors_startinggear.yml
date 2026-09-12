@@ -129,7 +129,7 @@
     head: ClothingHeadHatHoshat
     neck: ClothingNeckCloakHos
     id: VisitorPDA
-    belt: ClothingBeltSecurityFilled
+    belt: KsClothingBeltSecurityFilled #KS14
     back: ClothingBackpackSatchelSecurity
     ears: ClothingHeadsetAltSecurity
     eyes: ClothingEyesGlassesSecurity
@@ -148,7 +148,7 @@
     head: ClothingHeadHatCowboyWhite
     neck: SecurityWhistle
     id: VisitorPDA
-    belt: ClothingBeltSecurityFilled
+    belt: KsClothingBeltSecurityFilled #KS14
     back: ClothingBackpackSatchelLeather
     ears: ClothingHeadsetAltSecurity
     eyes: ClothingEyesGlassesSecurity
@@ -222,13 +222,13 @@
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadHelmetBasic
     id: VisitorPDA
-    belt: ClothingBeltSecurityFilled
+    belt: KsClothingBeltSecurityFilled #KS14
     back: ClothingBackpackSecurity
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterArmorBasic
-    pocket1: WeaponPistolMk58
-    pocket2: MagazinePistol
+    #pocket1: WeaponPistolMk58 #KS14: added to the belt
+    #pocket2: MagazinePistol #KS14: added to the belt
   inhand:
   - FlashlightSeclite
 
@@ -240,13 +240,13 @@
     head: ClothingHeadHelmetBasic
     neck: SecurityWhistle
     id: VisitorPDA
-    belt: ClothingBeltSecurityFilled
+    belt: KsClothingBeltSecurityFilled #KS14
     back: ClothingBackpackSatchelSecurity
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterArmorBasicSlim
-    pocket1: WeaponPistolMk58
-    pocket2: MagazinePistol
+    #pocket1: WeaponPistolMk58 #KS14: added to the belt
+    #pocket2: MagazinePistol #KS14: added to the belt
   inhand:
   - FlashlightSeclite
 
@@ -257,13 +257,13 @@
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadHelmetBasic
     id: VisitorPDA
-    belt: ClothingBeltSecurityWebbingFilled
+    belt: KsClothingBeltSecurityWebbingFilled #KS14
     back: ClothingBackpackSecurity
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterArmorBasic
-    pocket1: WeaponPistolMk58
-    pocket2: MagazinePistol
+    #pocket1: WeaponPistolMk58 #KS14: added to the belt
+    #pocket2: MagazinePistol #KS14: added to the belt
   inhand:
   - FlashlightSeclite
 
@@ -275,13 +275,13 @@
     head: ClothingHeadHatCorpsoft
     neck: SecurityWhistle
     id: VisitorPDA
-    belt: ClothingBeltSecurityFilled
+    belt: KsClothingBeltSecurityFilled #KS14
     back: ClothingBackpackSatchelSecurity
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterArmorBasicSlim
-    pocket1: WeaponPistolMk58
-    pocket2: MagazinePistol
+    #pocket1: WeaponPistolMk58 #KS14: added to the belt
+    #pocket2: MagazinePistol #KS14: added to the belt
   inhand:
   - FlashlightSeclite
 
@@ -330,7 +330,7 @@
     head: ClothingHeadHatBeretWarden
     neck: SecurityWhistle
     id: VisitorPDA
-    belt: ClothingBeltSecurityWebbingFilled
+    belt: KsClothingBeltSecurityWebbingFilled #KS14
     back: ClothingBackpackSecurity
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
@@ -349,7 +349,7 @@
     gloves: ClothingHandsGlovesCombat
     head: ClothingHeadHatWarden
     id: VisitorPDA
-    belt: ClothingBeltSecurityFilled
+    belt: KsClothingBeltSecurityFilled #KS14
     back: ClothingBackpackSatchelSecurity
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
@@ -1737,7 +1737,7 @@
     head: ClothingHeadHatHoshat
     neck: ClothingNeckCloakHos
     id: VisitorPDA
-    belt: ClothingBeltSecurityFilled
+    belt: KsClothingBeltSecurityFilled #KS14
     back: ClothingBackpackSatchelSecurity
     #ears: #No headsets.
     eyes: ClothingEyesGlassesSecurity
@@ -1752,7 +1752,7 @@
     head: ClothingHeadHatCowboyWhite
     neck: SecurityWhistle
     id: VisitorPDA
-    belt: ClothingBeltSecurityFilled
+    belt: KsClothingBeltSecurityFilled #KS14
     back: ClothingBackpackSatchelLeather
     #ears: #No headsets.
     eyes: ClothingEyesGlassesSecurity

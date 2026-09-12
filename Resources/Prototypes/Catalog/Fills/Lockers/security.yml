@@ -28,7 +28,7 @@
     children:
     - id: FlashlightSeclite
     - id: WeaponDisabler
-    - id: ClothingBeltSecurityFilled
+    - id: KsClothingBeltSecurityFilled #KS14
     - id: Flash
     - id: ClothingEyesGlassesSecurity
     - id: ClothingHandsGlovesCombat
@@ -76,7 +76,7 @@
       prob: 0.3
     - id: ClothingHeadHelmetBasic
     - id: ClothingOuterArmorBasic
-    - id: ClothingBeltSecurityFilled
+    - id: KsClothingBeltSecurityFilled #KS14
     - id: Flash
       prob: 0.5
     - id: ClothingEyesGlassesSecurity
