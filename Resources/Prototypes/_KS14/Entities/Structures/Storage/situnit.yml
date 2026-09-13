@@ -1,0 +1,91 @@
+- type: entity
+  id: KsSITContainmentUnit
+  parent: BaseRelaxedAnchoring
+  name: Organic Containment Unit
+  description: A state of the art containment unit for captured targets. It is designed to keep the target cryogenically frozen in a secure container.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Pullable
+  - type: Anchorable
+  - type: Sprite
+    sprite: Structures/Storage/morgue.rsi
+    layers:
+    - state: morgue_closed
+      map: ["enum.MorgueVisualLayers.Base"]
+    - state: morgue_tray
+      offset: 0, -1
+      visible: false
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: morgue_nomob_light
+      visible: false
+      map: ["enum.MorgueVisualLayers.Light"]
+      shader: unshaded
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        density: 1000
+        mask:
+        - MachineMask
+        layer:
+        - HalfWallLayer
+  - type: EntityStorage
+    isCollidableWhenOpen: true
+    showContents: false
+    capacity: 1
+    enteringOffset: 0, -1
+    whitelist:
+      components:
+      - MobState
+    air:
+      volume: 200
+      temperature: 2.7
+      moles:
+        Nitrogen: 10
+        Oxygen: 2.5
+    closeSound:
+      path: /Audio/Items/deconstruct.ogg
+    openSound:
+      path: /Audio/Items/deconstruct.ogg
+  - type: KsSITContainment
+    targetTemperature: 2.7
+    coolingRate: 2
+    rewarmTemperature: 310.15
+  - type: ContainerTemperature
+    coldDamageThreshold: 2.7
+    heatDamageThreshold: 1000
+  - type: EntityStorageLayingDownOverride
+  - type: ContainerContainer
+    containers:
+      entity_storage: !type:Container
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        # basic open.close layer:
+        enum.MorgueVisualLayers.Base:
+          True: { state: morgue_open}
+          False: { state: morgue_closed}
+        # show/hide morgue tray:
+        enum.StorageVisualLayers.Door:
+          True: { visible: true}
+          False: { visible: false}
+      enum.MorgueVisuals.Contents:
+        # toggle contents light indicator:
+        enum.MorgueVisualLayers.Light:
+          Empty: {visible: false}
+          HasContents: {visible: true, state: morgue_nomob_light}
+          HasMob: {visible: true, state: morgue_nosoul_light}
+          HasSoul: {visible: true, state: morgue_soul_light}
+  - type: Transform
+    anchored: true
+  - type: AntiRottingContainer
+  - type: StaticPrice
+    price: 200

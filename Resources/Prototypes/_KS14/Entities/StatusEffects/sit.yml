@@ -1,0 +1,16 @@
+- type: entity
+  parent: MobStatusEffectBase
+  id: KsSITStatusEffectCryoProtection
+  name: cryo protection
+  description: Cryogenic stasis field. Prevents cold damage while contained.
+  components:
+  - type: StatusEffect
+    whitelist:
+      components:
+      - MobState
+      - Damageable
+      requireAll: true
+  - type: KsSITCryoProtectionStatusEffect
+    modifiers:
+      coefficients:
+        Cold: 0
