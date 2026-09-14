@@ -1,0 +1,284 @@
+### RTGs
+# Advanced
+- type: entity
+  parent: BaseGenerator
+  id: KsGeneratorAdvancedRTG
+  name: Advanced RTG
+  description: A highly advanced radioisotope thermoelectric generator using plutonium-239.
+  suffix: 50kW
+  components:
+  - type: PowerSupplier
+    supplyRate: 50000 #5x output
+  - type: Sprite
+    sprite: _KS14/Structures/Power/Generation/advancedrtg.rsi
+    state: rtg
+  - type: PowerMonitoringDevice
+    sprite: _KS14/Structures/Power/Generation/advancedrtg.rsi
+    state: rtg
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger #Harder to break than the standard rtg
+          damage: 800
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 500
+        behaviors:
+          - !type:SpawnGasBehavior
+            gasMixture:
+              volume: 100
+              moles:
+                Tritium: 34.5701689
+              temperature: 373.15
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              KsGeneratorAdvancedRTGDamaged:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: KsGeneratorAdvancedRTG
+  id: KsGeneratorAdvancedRTGDamaged
+  name: damaged RTG
+  description: A highly advanced radioisotope thermoelectric generator using plutonium-239. This one has damaged shielding.
+  suffix: 50kW
+  components:
+  - type: PowerSupplier
+    supplyRate: 15000
+  - type: Sprite
+    sprite: _KS14/Structures/Power/Generation/advancedrtg.rsi
+    layers:
+      - state: rtg_damaged
+      - state: rtg_glow
+  - type: PowerMonitoringDevice
+    sprite: _KS14/Structures/Power/Generation/advancedrtg.rsi
+    state: rtg_damaged
+  - type: RadiationSource
+    intensity: 4 #Twice as worse
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 100
+          moles:
+            Tritium: 34.5701689
+          temperature: 373.15
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 5
+          SheetUranium1:
+            min: 10
+            max: 20
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# Syndicate
+- type: entity
+  parent: KsGeneratorAdvancedRTG
+  id: KsGeneratorAdvancedSyndicateRTG
+  name: Advanced Syndicate RTG
+  description: A highly advanced radioisotope thermoelectric generator using francium-223, bluespace technology allows its half-life to be extended.
+  suffix: 80kW
+  components:
+  - type: PowerSupplier
+    supplyRate: 80000 #8x output
+  - type: Sprite
+    sprite: _KS14/Structures/Power/Generation/syndicatertg.rsi
+    state: rtg
+  - type: PowerMonitoringDevice
+    sprite: _KS14/Structures/Power/Generation/syndicatertg.rsi
+    state: rtg
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger #Harder to break than the standard rtg
+          damage: 800
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 500
+        behaviors:
+          - !type:SpawnGasBehavior
+            gasMixture:
+              volume: 100
+              moles:
+                Tritium: 64.5701689
+              temperature: 373.15
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              KsGeneratorAdvancedSyndicateRTGDamaged:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: KsGeneratorAdvancedSyndicateRTG
+  id: KsGeneratorAdvancedSyndicateRTGDamaged
+  name: damaged RTG
+  description: A highly advanced radioisotope thermoelectric generator using francium-223. This one has damaged shielding.
+  suffix: 80kW
+  components:
+  - type: PowerSupplier
+    supplyRate: 24000
+  - type: Sprite
+    sprite: _KS14/Structures/Power/Generation/syndicatertg.rsi
+    layers:
+      - state: rtg_damaged
+      - state: rtg_glow
+  - type: PowerMonitoringDevice
+    sprite: _KS14/Structures/Power/Generation/syndicatertg.rsi
+    state: rtg_damaged
+  - type: RadiationSource
+    intensity: 6 #Thrice as worse
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 100
+          moles:
+            Tritium: 64.5701689
+          temperature: 373.15
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 5
+          SheetUranium1:
+            min: 10
+            max: 20
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# Alien
+- type: entity
+  parent: KsGeneratorAdvancedSyndicateRTG
+  id: KsGeneratorAdvancedAlienRTG #For abductors or otherwise alien visitors
+  name: Void Core
+  description: An odd-looking... generator? Made from a mysterious material.
+  suffix: 200kW, DEBUG, DoNotMap
+  components:
+  - type: PowerSupplier
+    supplyRate: 200000 #20x output
+  - type: Sprite
+    sprite: _KS14/Structures/Power/Generation/voidcore.rsi
+    state: rtg
+  - type: PowerMonitoringDevice
+    sprite: _KS14/Structures/Power/Generation/voidcore.rsi
+    state: rtg
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 1000
+        behaviors:
+          - !type:SpawnGasBehavior
+            gasMixture:
+              volume: 1000
+              moles:
+                Tritium: 20
+                Frezon: 20
+                Nitrogen: 20
+              temperature: 1
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              KsGeneratorAdvancedAlienRTGDamaged:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: KsGeneratorAdvancedAlienRTG
+  id: KsGeneratorAdvancedAlienRTGDamaged
+  name: damaged RTG
+  description: An odd-looking... generator? Made from a mysterious material. This one has damaged shielding.
+  suffix: 200kW
+  components:
+  - type: PowerSupplier
+    supplyRate: 50000
+  - type: Sprite
+    sprite: _KS14/Structures/Power/Generation/voidcore.rsi
+    layers:
+      - state: rtg_damaged
+      - state: rtg_glow
+  - type: PowerMonitoringDevice
+    sprite: _KS14/Structures/Power/Generation/voidcore.rsi
+    state: rtg_damaged
+  - type: RadiationSource
+    intensity: 10 #Five times worse, its a poor choice to break this because you will die in 10~15 seconds without a CE hardsuit
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:SpawnGasBehavior
+        gasMixture:
+          volume: 1000
+          moles:
+            Tritium: 40
+            Frezon: 40
+            Nitrogen: 40
+          temperature: 1
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

@@ -287,7 +287,7 @@
   suffix: 10kW
   components:
   - type: PowerSupplier
-    supplyRate: 10000
+    supplyRate: 3000 #KS14: Its broken it should produce less power because the rads are leaking out
   - type: Sprite
     sprite: Structures/Power/Generation/rtg.rsi
     layers:
