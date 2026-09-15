@@ -1,3 +1,4 @@
+using Content.Shared._KS14.SIT; // KS14
 using Content.Shared.Damage;
 using Content.Shared.Ninja.Systems;
 using Content.Shared.Whitelist;
@@ -11,7 +12,7 @@ namespace Content.Shared.Ninja.Components;
 /// Knocks them down for a bit and deals shock damage.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedStunProviderSystem))]
+[Access(typeof(SharedStunProviderSystem), typeof(KsSITGlovesSystem))] // KS14: allow SIT gloves to wire internal battery
 public sealed partial class StunProviderComponent : Component
 {
     /// <summary>

@@ -1,3 +1,4 @@
+using Content.Shared._KS14.SIT; // KS14
 using Content.Shared.Ninja.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
@@ -9,7 +10,7 @@ namespace Content.Shared.Ninja.Components;
 /// Does not rely on relay, simply being on the user and having BatteryUid set is enough.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedBatteryDrainerSystem))]
+[Access(typeof(SharedBatteryDrainerSystem), typeof(KsSITGlovesSystem))] // KS14: allow SIT gloves to wire internal battery
 public sealed partial class BatteryDrainerComponent : Component
 {
     /// <summary>

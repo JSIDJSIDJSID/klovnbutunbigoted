@@ -1,0 +1,8 @@
+- type: entity
+  parent: BaseToggleAction
+  id: KsActionToggleSITGloves
+  name: Toggle infiltration gloves
+  description: Toggles all glove actions on left click. Includes doorjack, draining power, stunning enemies and hacking certain computers.
+  components:
+  - type: Action
+    priority: -13
