@@ -9,7 +9,7 @@
   - type: Pullable
   - type: Anchorable
   - type: Sprite
-    sprite: Structures/Storage/morgue.rsi
+    sprite: _KS14/Structures/Storage/containment.rsi
     layers:
     - state: morgue_closed
       map: ["enum.MorgueVisualLayers.Base"]

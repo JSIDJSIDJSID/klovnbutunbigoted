@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "morgue from TG-Station used as a base, retextured for SIT containment unit by Genuine KS14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "morgue_closed",
+      "directions": 4
+    },
+    {
+      "name": "morgue_nomob_light",
+      "directions": 4
+    },
+    {
+      "name": "morgue_nosoul_light",
+      "directions": 4
+    },
+    {
+      "name": "morgue_open",
+      "directions": 4
+    },
+    {
+      "name": "morgue_soul_light",
+      "directions": 4
+    },
+    {
+      "name": "morgue_tray",
+      "directions": 4
+    }
+  ]
+}
