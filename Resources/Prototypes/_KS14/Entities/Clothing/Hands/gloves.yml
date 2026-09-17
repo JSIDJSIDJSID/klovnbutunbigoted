@@ -1,23 +1,14 @@
 - type: entity
-  parent: [ClothingHandsBase, BaseToggleClothing]
+  parent: [ClothingHandsChameleon, BaseToggleClothing]
   id: KsClothingHandsGlovesSIT
   name: infiltration gloves
   description: These advanced gloves provide enhanced protection and dexterity, most importantly it includes a built in taser.
   components:
   - type: Sprite
-    sprite: Clothing/Hands/Gloves/powerglove.rsi
-    layers:
-    - state: icon
-      map: [ "enum.ToggleableVisuals.Layer" ]
+    sprite: Clothing/Hands/Gloves/fingerless.rsi
   - type: Clothing
-    sprite: Clothing/Hands/Gloves/powerglove.rsi
+    sprite: Clothing/Hands/Gloves/fingerless.rsi
   - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.ToggleableVisuals.Enabled:
-        enum.ToggleableVisuals.Layer:
-          True: {state: icon-on}
-          False: {state: icon}
   - type: ToggleClothingPrefix
     prefixOn: on
   - type: ItemTogglePrefix
@@ -36,20 +27,17 @@
     components:
     - type: BatteryDrainer
     - type: StunProvider
-      cooldown: 10
+      cooldown: 1
       noPowerPopup: ninja-no-power
       whitelist:
         components:
         - Stamina
     - type: EmagProvider
-      whitelist:
-        components:
-        - Airlock
     - type: ResearchStealer
     - type: CommsHacker
-      threats: NinjaThreats
+      threats: SITThreats
     - type: CriminalRecordsHacker
-  - type: Battery
+  - type: Battery #Two charges
     maxCharge: 70
     startingCharge: 70
   - type: BatterySelfRecharger

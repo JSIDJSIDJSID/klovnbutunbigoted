@@ -1,0 +1,28 @@
+# threats called in by SIT hacking comms console
+- type: weightedRandom
+  id: SITThreats
+  weights:
+    KsLoneOpsSpawn: 5
+    KsSleeperAgents: 30
+    KsWizard: 1
+    KsNukeCalibration: 3
+
+- type: ninjaHackingThreat
+  id: KsSleeperAgents
+  announcement: terror-sleeperagents
+  rule: SleeperAgents
+
+- type: ninjaHackingThreat
+  id: KsLoneOpsSpawn
+  announcement: terror-loneops
+  rule: LoneOpsSpawn
+
+- type: ninjaHackingThreat
+  id: KsWizard
+  announcement: terror-wizard
+  rule: Wizard
+
+- type: ninjaHackingThreat
+  id: KsNukeCalibration
+  announcement: terror-nukecalibration
+  rule: NukeCalibration
