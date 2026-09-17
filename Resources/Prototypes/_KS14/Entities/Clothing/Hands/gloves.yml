@@ -50,8 +50,8 @@
       threats: NinjaThreats
     - type: CriminalRecordsHacker
   - type: Battery
-    maxCharge: 360
-    startingCharge: 360
+    maxCharge: 70
+    startingCharge: 70
   - type: BatterySelfRecharger
-    autoRechargeRate: 6
+    autoRechargeRate: 2
   - type: ExaminableBattery
