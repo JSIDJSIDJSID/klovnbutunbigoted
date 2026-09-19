@@ -4,15 +4,19 @@
   name: electro gloves
   description: A pair of advanced electronic gloves meant for altering technology and delivering shocks.
   components:
-  - type: Sprite #placeholder
-    sprite: Clothing/Hands/Gloves/fingerless.rsi
+  - type: Sprite
+    sprite: _KS14/Clothing/Hands/Gloves/sitelectro.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
   - type: Clothing
-    sprite: Clothing/Hands/Gloves/fingerless.rsi
+    sprite: _KS14/Clothing/Hands/Gloves/sitelectro.rsi
   - type: Appearance
-#  - type: ToggleClothingPrefix
-#    prefixOn: on
+  - type: ToggleClothingPrefix
+    prefixOn: on
   - type: ItemTogglePrefix
     prefixOn: on
+    prefixOff: off
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-nanomachines
@@ -54,3 +58,23 @@
     activatedDamage:
       types:
         Shock: 5 #7.5 dps
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundDeactivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
+  - type: GenericVisualizer
+    visuals:
+     enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: icon-on}
+          False: {state: icon}
