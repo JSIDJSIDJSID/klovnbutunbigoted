@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared._KS14.Anchorless.Systems;
 
 /// <summary>
-/// Horror form is a first-class form state. It never creates a hidden mob or a second body.
+///     Horror form is a first-class form state. It never creates a hidden mob or a second body.
 /// </summary>
 public sealed partial class AnchorlessHorrorSystem : EntitySystem
 {
@@ -16,17 +16,14 @@ public sealed partial class AnchorlessHorrorSystem : EntitySystem
     [Dependency] private SharedActionsSystem _actions = default!;
     [Dependency] private SharedAnchorlessIdentitySystem _identities = default!;
 
-    public override void Initialize()
-    {
-        SubscribeLocalEvent<KsAnchorlessAntagComponent, AnchorlessHorrorActionEvent>(OnHorror);
-        SubscribeLocalEvent<KsAnchorlessAntagComponent, DamageModifyEvent>(OnDamageModify);
-    }
-
+    [SubscribeLocalEvent]
     private void OnDamageModify(Entity<KsAnchorlessAntagComponent> ent, ref DamageModifyEvent args)
     {
         if (args.Damage.DamageDict.TryGetValue("Heat", out var heat))
             args.Damage.DamageDict["Heat"] = heat * ent.Comp.HeatMultiplier;
     }
+
+    [SubscribeLocalEvent]
     private void OnHorror(Entity<KsAnchorlessAntagComponent> ent, ref AnchorlessHorrorActionEvent args)
     {
         if (args.Handled)
@@ -52,6 +49,7 @@ public sealed partial class AnchorlessHorrorSystem : EntitySystem
         }
 
         Dirty(ent);
+        RaiseLocalEvent(ent, new AnchorlessHorrorFormChangedEvent());
     }
 
     private void RemoveArmblade(Entity<KsAnchorlessAntagComponent> ent)
