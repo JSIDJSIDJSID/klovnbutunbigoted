@@ -1,0 +1,43 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSIT
+  name: Infiltration jumpsuit
+  description: A tactical jumpsuit for syndicate infiltrators.
+  components:
+  - type: Sprite
+    sprite: _KS14/Clothing/Uniforms/Jumpsuit/situniform.rsi
+  - type: Clothing
+    sprite: _KS14/Clothing/Uniforms/Jumpsuit/situniform.rsi
+  - type: SuitSensor
+    controlsLocked: false
+    randomMode: false
+    mode: SensorOff
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Caustic: 0.80
+
+- type: entity
+  parent: ClothingUniformJumpsuitChameleon
+  id: KsClothingUniformJumpsuitSITArmoredChameleon
+  name: advanced chameleon jumpsuit
+  description: Armored chameleon uniform for elite syndicate infiltrators, designed for covert operations.
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.85
+        Heat: 0.90
+        Radiation: 0.65
+        Caustic: 0.25 #The jumpsuit itself is immune to acids, but it doesnt cover your head, hands, or feet so you still take some damage
+  - type: StaminaResistance
+    damageCoefficient: 0.90
+  - type: SuitSensor
+    controlsLocked: false
+    randomMode: false
+    mode: SensorOff

@@ -1,0 +1,30 @@
+- type: entity
+  parent: ClothingHeadHelmetEVA
+  id: ClothingHeadHelmetVoidSIT
+  name: Infiltration void helmet
+  description: A void helmet made for infiltratiors.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _KS14/Clothing/Head/Hardsuits/sitvoid.rsi
+  - type: Clothing
+    sprite: _KS14/Clothing/Head/Hardsuits/sitvoid.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.1
+    coolingCoefficient: 0.1
+  - type: Tag
+    tags:
+    - HelmetEVA
+  - type: Armor #Standard sec helmet values plus radiation resist
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Radiation: 0.75
+      flatReductions:
+        Blunt: 1
+        Slash: 1
+        Piercing: 1
+        Heat: 1

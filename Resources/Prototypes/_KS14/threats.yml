@@ -2,10 +2,10 @@
 - type: weightedRandom
   id: SITThreats
   weights:
-    KsLoneOpsSpawn: 5
+    KsLoneOpsSpawn: 15
     KsSleeperAgents: 30
-    KsWizard: 1
-    KsNukeCalibration: 3
+    KsWizard: 10
+    KsNukeCalibration: 1 #its a 1.82% chance plus the fact SIT is already rare, leave it because it would be REALLY funny if it happened
 
 - type: ninjaHackingThreat
   id: KsSleeperAgents

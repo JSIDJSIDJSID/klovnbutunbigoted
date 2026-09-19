@@ -1,0 +1,31 @@
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterHardsuitSuitVoidSIT
+  name: Infiltration voidsuit
+  description: A syndicate infiltration voidsuit.
+  components:
+  - type: Sprite #placeholder
+    sprite: _KS14/Clothing/OuterClothing/Hardsuits/sitvoid.rsi
+  - type: Clothing
+    sprite: _KS14/Clothing/OuterClothing/Hardsuits/sitvoid.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetVoidSIT
+    slot: head
+  - type: Armor #Standard sec armor values plus radiation resist
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.85
+        Radiation: 0.6
+      flatReductions:
+        Piercing: 5.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}

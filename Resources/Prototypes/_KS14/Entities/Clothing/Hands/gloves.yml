@@ -1,25 +1,22 @@
 - type: entity
-  parent: [ClothingHandsChameleon, BaseToggleClothing]
+  parent: [ClothingHandsBase, BaseToggleClothing]
   id: KsClothingHandsGlovesSIT
-  name: infiltration gloves
-  description: These advanced gloves provide enhanced protection and dexterity, most importantly it includes a built in taser.
+  name: electro gloves
+  description: A pair of advanced electronic gloves meant for altering technology and delivering shocks.
   components:
-  - type: Sprite
+  - type: Sprite #placeholder
     sprite: Clothing/Hands/Gloves/fingerless.rsi
   - type: Clothing
     sprite: Clothing/Hands/Gloves/fingerless.rsi
   - type: Appearance
-  - type: ToggleClothingPrefix
-    prefixOn: on
+#  - type: ToggleClothingPrefix
+#    prefixOn: on
   - type: ItemTogglePrefix
     prefixOn: on
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-nanomachines
   - type: FingerprintMask
-  - type: Thieving
-    stripTimeReduction: 1.5
-    stealthy: true
   - type: ToggleClothing
     action: KsActionToggleSITGloves
     disableOnUnequip: true
@@ -37,9 +34,23 @@
     - type: CommsHacker
       threats: SITThreats
     - type: CriminalRecordsHacker
-  - type: Battery #Two charges
+  - type: Battery #enough charge to stun people twice before a long recharge wait
     maxCharge: 70
     startingCharge: 70
   - type: BatterySelfRecharger
-    autoRechargeRate: 2
+    autoRechargeRate: 1
   - type: ExaminableBattery
+  - type: MeleeWeapon
+    attackRate: 1.5
+    damage:
+      types:
+        Blunt: 3.3 #4.95 dps vs fists standard 5, close enough
+    animation: WeaponArcFist
+  - type: StaminaDamageOnHit
+    damage: 20
+  - type: Stunbaton
+    energyPerUse: 7
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Shock: 5 #7.5 dps
