@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterEVASuitBase
+  parent: [ClothingOuterEVASuitBase, BaseSyndicateContraband]
   id: ClothingOuterHardsuitSuitVoidSIT
   name: Infiltration voidsuit
   description: A syndicate infiltration voidsuit.

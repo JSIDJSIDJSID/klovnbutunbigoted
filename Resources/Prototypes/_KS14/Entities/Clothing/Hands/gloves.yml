@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingHandsBase, BaseToggleClothing]
+  parent: [ClothingHandsBase, BaseToggleClothing, BaseSyndicateContraband]
   id: KsClothingHandsGlovesSIT
   name: electro gloves
   description: A pair of advanced electronic gloves meant for altering technology and delivering shocks.

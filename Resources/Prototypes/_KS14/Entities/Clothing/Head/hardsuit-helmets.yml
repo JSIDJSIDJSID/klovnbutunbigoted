@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHeadHelmetEVA
+  parent: [ClothingHeadHelmetEVA, BaseSyndicateContraband]
   id: ClothingHeadHelmetVoidSIT
   name: Infiltration void helmet
   description: A void helmet made for infiltratiors.

@@ -97,7 +97,7 @@
 
 # Syndicate
 - type: entity
-  parent: KsGeneratorAdvancedRTG
+  parent: [KsGeneratorAdvancedRTG, BaseSyndicateContraband]
   id: KsGeneratorAdvancedSyndicateRTG
   name: Advanced Syndicate RTG
   description: A highly advanced radioisotope thermoelectric generator using francium-223, bluespace technology allows its half-life to be extended.
@@ -237,6 +237,8 @@
                 max: 1
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
+  - type: Contraband
+    severity: Magical
 
 - type: entity
   parent: KsGeneratorAdvancedAlienRTG

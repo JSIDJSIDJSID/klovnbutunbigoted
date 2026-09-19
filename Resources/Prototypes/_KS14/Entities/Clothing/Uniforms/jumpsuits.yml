@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, BaseSyndicateContraband]
   id: ClothingUniformJumpsuitSIT
   name: Infiltration jumpsuit
   description: A tactical jumpsuit for syndicate infiltrators.
