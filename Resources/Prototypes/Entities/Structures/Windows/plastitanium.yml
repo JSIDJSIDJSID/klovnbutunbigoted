@@ -48,6 +48,8 @@
         layer:
         - WallLayer
         density: 4000
+  - type: RadiationBlocker
+    resistance: 12 #KS14
 
 - type: entity
   id: PlastitaniumWindowSquareBase
@@ -124,7 +126,7 @@
     fuelCost: 15
     doAfterDelay: 3
   - type: Damageable
-    damageModifierSet: RGlass
+    damageModifierSet: KsPlastitaniumGlass
   - type: Injurable
     damageContainer: StructuralInorganic
 
@@ -220,6 +222,6 @@
     fuelCost: 15
     doAfterDelay: 3
   - type: Damageable
-    damageModifierSet: RGlass
+    damageModifierSet: KsPlastitaniumGlass
   - type: Injurable
     damageContainer: StructuralInorganic

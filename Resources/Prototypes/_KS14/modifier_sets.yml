@@ -1,0 +1,30 @@
+- type: damageModifierSet
+  id: KsPlastitanium #Same stuff Death Squad armor is made out of, but in this case its completely solid instead of being a hollow suit
+  coefficients: #Double the toughness of reinforced walls plus 100% shock resist and 10% heat damage
+    Blunt: 0.25
+    Slash: 0.25
+    Piercing: 0.25
+    Shock: 0
+    Structural: 0.1
+    Heat: 0.1
+  flatReductions:
+    Blunt: 20 #GGs to tiders with toolboxes
+    Slash: 20
+    Piercing: 20
+    Heat: 20
+    Structural: 20
+
+- type: damageModifierSet
+  id: KsPlastitaniumGlass #Assumed to include much more plasma in the mix making it more seethrough?
+  coefficients: #10% stronger than reinforced walls in most resistances besides structure because its still glass
+    Blunt: 0.40
+    Slash: 0.40
+    Piercing: 0.35
+    Heat: 0.2
+    Shock: 0
+    Structural: 0.3
+  flatReductions:
+    Blunt: 12
+    Slash: 12
+    Piercing: 12
+    Structural: 12
